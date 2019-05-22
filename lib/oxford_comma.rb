@@ -5,9 +5,12 @@ def oxford_comma(array)
   elsif size == 2
     return array.join(" and ")
   else
-    new_array = array
-    last_element = new_array.pop()
-    string = new_array.join(", ")
+    copy = []
+    array.each do |element|
+      copy << element.dup
+    end
+    last_element = copy.pop()
+    string = copy.join(", ")
     string.concat(", and #{last_element}")
     return string
   end
