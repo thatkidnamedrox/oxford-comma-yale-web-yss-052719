@@ -3,5 +3,5 @@ def oxford_comma(array)
 
   array.join(", ")
   array.concat("and #{last_element}")
-  
+
 end
